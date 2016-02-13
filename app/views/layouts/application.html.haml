@@ -7,6 +7,8 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
+    - flash.each do |name, msg|
+      = content_tag :div, msg, class: [:alert, alert_for(name)]
     %nav.navbar.navbar-light.bg-faded
       %button.navbar-toggler.hidden-sm-up{"data-target" => "#exCollapsingNavbar2", "data-toggle" => "collapse", :type => "button"}
         \☰
