@@ -1,1 +1,12 @@
-%h1 Posts
+.container
+  %h1.display-4 User Posts
+  %p.lead Check out the posts below
+
+  - @posts.each do |post|
+    .row
+      .card
+        = link_to (image_tag post.image.url(:medium), class: "card-img-top img-fluid", alt: "Insta image"), post_path(post)
+
+        .card-block
+          %p.card-text
+            = post.caption

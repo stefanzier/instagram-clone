@@ -14,7 +14,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml'
 gem 'html2haml'
 gem "paperclip", "~> 4.3"
+gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'simple_form'
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
 
 
 
