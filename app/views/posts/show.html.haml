@@ -1,0 +1,12 @@
+.container
+  .row
+    %h6
+      = link_to "Back to feed", posts_path
+    .card
+      = image_tag @post.image.url(:medium), class: "card-img-top img-fluid", alt: "Insta image"
+
+      .card-block
+        %p.card-text
+          = @post.caption |
+          %br/
+          = link_to "Edit", edit_post_path(@post)
